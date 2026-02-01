@@ -1,6 +1,10 @@
 let users = JSON.parse(localStorage.getItem("users")) || [];
 let currentUser = null;
 
+document.getElementById("signupForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  register();
+});
 
 function register() {
     const name = document.getElementById("name").value;
@@ -22,6 +26,15 @@ function register() {
         alert("Invalid Phone number");
         return;
     }
+
+    const regex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}$/;
+
+
+    if (!regex.test(password)) {
+        alert("Password must contain uppercase, lowercase, number & minimum 8 characters");
+        return;
+    }
+
     let x = users.find((user) => {
         return user.email == email || user.phone == phone
     });
@@ -42,10 +55,12 @@ function register() {
 
     }
 
+
     users.push(newUser);
     console.log(users);
     updateStorage();
     alert("User registered successfully");
+    window.location.href = "SignIn.html";
 }
 
 
