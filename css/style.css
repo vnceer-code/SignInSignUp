@@ -1,14 +1,16 @@
-.text_label{
-        font-weight: 500;
+.text_label {
+    font-weight: 500;
 }
 
-.input-btn{
-        margin-top: 30px;
+.input-btn {
+    margin-top: 30px;
 }
-.cntr{
+
+.cntr {
     text-align: center;
 }
-.container-input{
+
+.container-input {
     padding: 30px;
     border: 1px solid #e9ecef;
     margin-top: 10%;
@@ -16,7 +18,8 @@
     margin-left: 10%;
     margin-right: 10%;
 }
-.container-input1{
+
+.container-input1 {
     padding: 30px;
     border: 1px solid #e9ecef;
     margin-top: 10%;
@@ -24,9 +27,38 @@
     margin-left: 30%;
     margin-right: 30%;
 }
-.label-gap{
+
+.label-gap {
     margin-top: 30px;
 }
+
+.password-box {
+    position: relative;
+
+}
+
+.confirmpassword-box {
+    position: relative;
+
+}
+
+#toggleEye {
+    position: absolute;
+    right: 20px;
+    top: 74%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+#toggleEyeConfirm {
+    position: absolute;
+    right: 20px;
+    top: 74%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #666;
+}
+
 
 
 * {
@@ -363,12 +395,12 @@ h1 {
 
     }
 
-    .booknow_btn:hover{
+    .booknow_btn:hover {
         cursor: pointer;
         background-color: rgb(255, 81, 0);
     }
 
-   
+
 
     .brand {
         flex: 1;
@@ -417,6 +449,7 @@ h1 {
         display: inline-block;
 
     }
+
     .brand {
         flex: 1;
         display: flex;

@@ -96,7 +96,35 @@ function loggedOut() {
     localStorage.removeItem("currentUser");
     window.location.href = "SignIn.html";
 }
+function togglePassword() {
+    const password = document.getElementById("password");
+    const eye = document.getElementById("toggleEye");
 
+    if (password.type === "password") {
+        password.type = "text";
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash");
+    } else {
+        password.type = "password";
+        eye.classList.remove("fa-eye-slash");
+        eye.classList.add("fa-eye");
+    }
+}
+
+function toggleConfirmPassword() {
+    const confirmpassword = document.getElementById("confirmpassword");
+    const eye = document.getElementById("toggleEyeConfirm");
+
+    if (confirmpassword.type === "password") {
+        confirmpassword.type = "text";
+        eye.classList.remove("fa-eye");
+        eye.classList.add("fa-eye-slash");
+    } else {
+        confirmpassword.type = "password";
+        eye.classList.remove("fa-eye-slash");
+        eye.classList.add("fa-eye");
+    }
+}
 
 
 

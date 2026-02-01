@@ -7,32 +7,33 @@
     <title>Responsive Signup and Signin Page with JavaScript Validations</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-    <form action="">
-        <div class=" container-input">
+    <form>
+        <div class="container-input">
             <div class="row">
                 <h2 class="cntr">Sign Up</h2>
                 <p class="cntr">Please fill in this form to create an account.</p>
             </div>
             <div class="row">
                 <div class="col-md-6 form-group label-gap">
-                    <label  class="form-label text_label">First name</label>
+                    <label class="form-label text_label">First name</label>
                     <input type="text" id="name" class="form-control" placeholder="Enter your full name " required>
 
                 </div>
                 <div class="col-md-6 form-group label-gap">
-                    <label  class="form-label text_label">Email address</label>
+                    <label class="form-label text_label">Email address</label>
                     <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
                         placeholder="Enter email" required>
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
                         else.</small>
                 </div>
                 <div class="col-md-6 form-group label-gap">
-                    <label  class="form-label text_label">Phone number</label>
+                    <label class="form-label text_label">Phone number</label>
                     <input type="number" id="phone" class="form-control" placeholder="Enter your phone number "
                         pattern="[0-9]{10}" title="Phone number must be exactly 10 digits" required>
 
@@ -40,24 +41,28 @@
                 <div class="col-md-6 form-group label-gap">
                     <label class="form-label text_label">City / Location</label>
                     <input type="text" class="form-control" id="city" aria-describedby="emailHelp"
-                        placeholder="Enter city / location" pattern="[A-Za-z ]+" title="City must contain only alphabets" required>
+                        placeholder="Enter city / location" pattern="[A-Za-z ]+"
+                        title="City must contain only alphabets" required>
                 </div>
 
 
 
-                <div class=" col-md-6 form-group label-gap">
-                    <label  class="form-label text_label">Password</label>
+                <div class=" col-md-6 form-group label-gap password-box">
+                    <label class="form-label text_label">Password</label>
                     <input type="password" class="form-control" minlength="8"
                         pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{8,}"
                         title="Must contain uppercase, lowercase and number" id="password" placeholder="Password"
-                        required >
+                        required>
+                    <span><i class="fa-solid fa-eye" id="toggleEye" onclick="togglePassword()"></i></span>
                 </div>
-                <div class=" col-md-6 form-group label-gap">
-                    <label  class="form-label text_label">Confirm Password</label>
-                    <input type="password" class="form-control" id="confirmpassword" placeholder="Re enter Password" required>
+                <div class=" col-md-6 form-group label-gap confirmpassword-box">
+                    <label class="form-label text_label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmpassword" placeholder="Re enter Password"
+                        required>
+                    <span><i class="fa-solid fa-eye" id="toggleEyeConfirm" onclick="toggleConfirmPassword()"></i></span>
                 </div>
                 <div class=" d-grid  col-md-6 col-lg-4 mx-auto input-btn">
-                    <button  class="btn btn-primary d-grid" onclick="register()">Submit</button>
+                    <button class="btn btn-primary d-grid" onclick="register()">Submit</button>
                 </div>
 
             </div>
@@ -68,7 +73,7 @@
 
 
     </form>
-     <p class="cntr">Already registered? <a href="/SignIn.html">Login</a></p>
+    <p class="cntr">Already registered? <a href="/SignIn.html">Login</a></p>
     <script src="/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
